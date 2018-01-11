@@ -20,10 +20,6 @@ public class HelloController {
     RestTemplate restTemplate;
     @RequestMapping(value = "/hello",method = RequestMethod.GET)
     public String hello() throws InterruptedException {
-        int sleepTime=new Random().nextInt(15000);
-        System.err.println("sleep time "+sleepTime);
-        Thread.sleep(sleepTime);
-        System.err.println("hello service");
         return "hello service";
     }
     @RequestMapping(value = "/serviceHello",method = RequestMethod.GET)
